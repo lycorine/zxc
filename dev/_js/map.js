@@ -113,17 +113,6 @@ var zoneLabelLayer = L.geoJson(zoneLabelJSON, {
   }
 }).addTo(map);
 
-//remove zone labels when map is zoomed out too far
-map.on('zoomend', function (e) {
-    var currentZoom = map.getZoom();
-    if( currentZoom < 10 ){
-      map.removeLayer(zoneLabelLayer);
-    }
-    else{
-      map.addLayer(zoneLabelLayer);
-    }
-});
-
 /*
 //add json data for routes
 var routesLayer = L.geoJSON(routesJSON, {
@@ -136,6 +125,40 @@ var routesLayer = L.geoJSON(routesJSON, {
   }
 }).addTo(map);
 */
+
+//add json data for state labels
+var stateLabelLayer = L.geoJson(stateLabelJSON, {
+
+  onEachFeature: function (feature, layer) {
+
+    //create label style
+    var stateLabelMarker = L.divIcon({
+      className: 'marker--state-label',
+      iconSize: [40, 18],
+      html: feature.properties.label
+    });
+
+    layer.setIcon(stateLabelMarker);
+  }
+}).addTo(map);
+
+//remove zone labels when map is zoomed out too far
+map.on('zoomend', function (e) {
+    var currentZoom = map.getZoom();
+    if( currentZoom < 10 ){
+      map.removeLayer(zoneLabelLayer);
+    }
+    else{
+      map.addLayer(zoneLabelLayer);
+    }
+
+    if( currentZoom < 9 ){
+      map.removeLayer(stateLabelLayer);
+    }
+    else{
+      map.addLayer(stateLabelLayer);
+    }
+});
 
 //zoom and center map around points
 map.fitBounds(zonesLayer.getBounds());

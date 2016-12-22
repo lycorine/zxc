@@ -54,7 +54,7 @@ var stateLabelJSON = [{
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.83430480957031,
+          -73.63430480957031,
           40.775341832372675,
           0
         ]
@@ -68,8 +68,8 @@ var stateLabelJSON = [{
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.98536682128906,
-          40.98197154086656,
+          -74.58536682128906,
+          41.03197154086656,
           0
         ]
       },

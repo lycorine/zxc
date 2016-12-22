@@ -190,6 +190,24 @@ var stateLabelLayer = L.geoJson(stateLabelJSON, {
   }
 }).addTo(map);
 
+//remove zone labels when map is zoomed out too far
+map.on('zoomend', function (e) {
+    var currentZoom = map.getZoom();
+    if( currentZoom < 10 ){
+      map.removeLayer(zoneLabelLayer);
+    }
+    else{
+      map.addLayer(zoneLabelLayer);
+    }
+
+    if( currentZoom < 9 ){
+      map.removeLayer(stateLabelLayer);
+    }
+    else{
+      map.addLayer(stateLabelLayer);
+    }
+});
+
 //zoom and center map around points
 map.fitBounds(locationsLayer.getBounds());
 

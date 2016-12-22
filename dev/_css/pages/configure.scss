@@ -73,7 +73,7 @@
   }
 }
 
-/* Marker */
+/* Labels */
 .marker--zone-label{
   color: #fff;
   white-space: nowrap;
@@ -81,6 +81,17 @@
   font-weight: bold;
   font-size: 16px;
   text-shadow: 0 0 5px rgba(#000, 0.8);
+}
+
+.marker--state-label{
+  width: auto !important;
+  color: $dark-gray;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.1;
+  text-shadow:-1px -1px #fff, -1px 0px #fff, -1px 1px #fff, 0px -1px #fff, 0px 0px #fff, 0px 1px #fff, 1px -1px #fff, 1px 0px #fff, 1px 1px #fff;
 }
 
 /* Popup */
