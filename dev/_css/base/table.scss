@@ -1,0 +1,44 @@
+caption{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: $darker-gray;
+  text-align: left;
+}
+
+table{
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.25em;
+
+  & th,
+  & td{
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top;
+    border-top: 1px solid $light-gray;
+    text-align: left;
+  }
+
+  & thead th{
+    vertical-align: bottom;
+    border-bottom: 2px solid $light-gray;
+  }
+
+  & tbody tr:nth-child(even){
+    background-color: $lighter-gray;
+  }
+
+  & col[class*="col-"]{
+    position: static;
+    float: none;
+    display: table-column;
+  }
+
+  & td[class*="col-"],
+  & th[class*="col-"]{
+    position: static;
+    float: none;
+    display: table-cell;
+  }
+}

@@ -1,0 +1,220 @@
+.main-header{
+  padding: 15px 0 12px;
+  background-color: $darker-gray;
+  @extend %clearfix;
+
+  @media (min-width: $sm){
+    padding: 20px 0;
+  }
+
+  a{
+    border-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   Logo
+========================================================================== */
+
+.branding{
+
+  @media (min-width: $sm){
+    float: left;
+  }
+}
+
+.logo{
+  width: 180px;
+  margin: 0 auto 6px;
+  display: block;
+
+  @media (min-width: $sm){
+    margin: 9px auto;
+  }
+
+  @media (min-width: $md){
+    width: 297px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Nav
+========================================================================== */
+
+.main-nav{
+  display: none;
+
+  @media (min-width: $sm){
+    display: block;
+    float: right;
+  }
+}
+
+.menu{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-item{
+  display: inline-block;
+  font-size: 1rem;
+
+  a{
+    color: $light-gray;
+    padding: 10px 5px;
+    display: inline-block;
+
+    &:hover, &:focus{
+      color: $gray;
+    }
+  }
+}
+
+.menu-item--cart{
+
+  &::before{
+    content: "|";
+    color: $gray;
+    margin: 0 4px;
+  }
+}
+
+.menu-link---dropdown{
+
+  &::after{
+    content: "\25bc";
+    margin-left: 3px;
+    color: $gray;
+    font-size: 0.75rem;
+  }
+}
+
+/* Sub Menu */
+
+.main-nav{
+
+  .menu-item--parent{
+    position: relative;
+
+    &:hover .sub-menu{
+      display: block;
+    }
+  }
+
+  .sub-menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 8px 12px;
+    margin: 0;
+    background-color: $white;
+    box-shadow: 0 0 4px rgba($darker-gray, 0.4);
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    text-align: left;
+
+    .menu-item{
+      display: block;
+      white-space: nowrap;
+      font-size: 0.875rem;
+
+      a{
+        color: $gray;
+        padding: 0;
+
+        &:hover, &:focus{
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Mobile Nav
+========================================================================== */
+
+.mobile-nav{
+  color: $light-gray;
+  display: block;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: $sm){
+    display: none;
+  }
+
+  a{
+    color: $light-gray;
+    padding: 0;
+
+    &:hover, &:focus{
+      color: $gray;
+    }
+  }
+
+  .menu-item--account{
+    border-top: 1px solid $gray;
+    margin-top: 5px;
+    padding-top: 5px;
+
+    .menu-link---dropdown{
+      text-transform: uppercase;
+    }
+  }
+
+  .sub-menu{
+    display: none;
+  }
+}
+
+.menu-item--toggle{
+
+  a::before{
+    content: "\002630";
+    margin-right: 3px;
+  }
+}
+
+.mobile-visible-menu{
+  display: inline-block;
+  margin: 0 0 0 8px;
+  padding: 0;
+}
+
+.mobile-toggle-menu{
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  background-color: mix($darker-gray, $dark-gray, 60%);
+  width: calc(100% + 30px);
+  padding: 10px 15px;
+  display: none;
+  z-index: 10;
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    display: block;
+  }
+}
+
+.mobile-menu-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  padding: 3px 10px !important;
+
+  &::before{
+    content: "\00d7";
+  }
+}

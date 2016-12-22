@@ -1,0 +1,28 @@
+.confirmation{
+
+  .main-header{
+    margin-bottom: 60px;
+  }
+
+  .main-content{
+    padding-bottom: 60px;
+  }
+}
+
+.confirmation-message{
+  text-align: center;
+  font-size: 1.25rem;
+  border: 2px solid $light-gray;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+.confirmation-message__highlight{
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-weight: bold;
+
+  @media (min-width: $sm){
+    font-size: 1.5rem;
+  }
+}

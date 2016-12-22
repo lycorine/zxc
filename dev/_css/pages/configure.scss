@@ -1,0 +1,257 @@
+.configure{
+  height: 100vh;
+  position: relative;
+
+  .main-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  .main-footer{
+    background-color: $darker-gray;
+    z-index: 10000;
+    color: $gray;
+
+    a:hover, a:focus{
+      color: $light-gray;
+    }
+  }
+
+  .container{
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Map
+========================================================================== */
+
+.configure-map{
+  width: 100%;
+  position: absolute;
+  top: 91px; /* height of header */
+  bottom: 230px; /* height of footer + sidebar */
+  right: 0;
+  left: 0;
+
+  @media (min-width: $sm){
+    width: calc(100% - 250px); /* width of sidebar */
+    top: 89px; /* height of header */
+    bottom: 35px; /* height of footer */
+    left: 250px; /* width of sidebar */
+  }
+}
+
+/* Links in map */
+
+.leaflet-container a{
+  border-bottom: 0;
+  color: $blue;
+  transition: color 0.2s;
+
+  &:hover, &:focus{
+    color: $green;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  &.leaflet-active{
+    outline: 2px solid $green;
+  }
+}
+
+/* Map controls */
+
+.leaflet-bar a{
+  color: $dark-gray;
+
+  &:hover{
+    color: inherit;
+  }
+}
+
+/* Marker */
+.marker--zone-label{
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(#000, 0.8);
+}
+
+/* Popup */
+
+.marker-message{
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Sidebar
+========================================================================== */
+
+.configure-sidebar{
+  position: absolute;
+  bottom: 42px; /* height of footer + sidebar */
+  left: 0;
+  height: 188px;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: mix($darker-gray, $dark-gray, 60%);
+  color: $white;
+
+  @media (min-width: $sm) and (max-height: 625px){
+    overflow-y: scroll;
+  }
+
+  @media (min-width: $sm){
+    top: 89px; /* height of header */
+    bottom: 35px; /* height of footer */
+    height: auto;
+    width: 250px;
+    padding: 30px 15px;
+  }
+}
+
+.configure-sidebar-title{
+  font-size: 1.5rem;
+  font-weight: $light;
+
+  @media (max-width: $sm){
+    @include visuallyhidden;
+  }
+}
+
+/* Form */
+
+.configure-label{
+  margin: 0.5em 0;
+
+  @media (min-width: $sm){
+    margin: 1.25em 0;
+  }
+}
+
+.configure-label-title{
+  font-size: 0.875rem;
+  font-weight: $regular;
+  color: $gray;
+  letter-spacing: 0;
+  margin: 0 0 5px;
+
+  @media (max-width: $sm){
+    @include visuallyhidden;
+  }
+}
+
+.select-desktop{
+
+  .btn{
+    color: $white;
+    border: 2px solid mix($light-gray, $gray, 50%);
+    background-color: transparent;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    border-radius: 0;
+
+    .dropdown-toggle__text{
+      float: left;
+    }
+
+    .caret{
+      float: right;
+      margin-top: 10px;
+    }
+  }
+
+  .open .btn{
+    background-color: transparent;
+    border-color: $green;
+    color: $green;
+  }
+
+  .scrollable-menu{
+    max-height: 325px;
+
+    @media (min-height: 800px){
+      max-height: 400px;
+    }
+  }
+}
+
+.configure-select{
+  color: $white;
+  border: 2px solid mix($light-gray, $gray, 50%);
+  height: 30px;
+
+  @media (min-width: $sm){
+    height: 45px;
+  }
+
+  &:focus, &:active{
+    border-color: $green;
+    color: $green;
+    outline: 0;
+
+    &::-ms-value{
+      color: $green;
+    }
+  }
+
+  &::-ms-value{
+    background: none;
+  }
+
+  option{
+    color: $darker-gray;
+    background-color: $white;
+    font-size: 16px;
+
+    .ie9 &{
+      background-color: transparent;
+    }
+  }
+}
+
+.configure-submit{
+  margin: 0 15px 0 0;
+  padding: 4px 20px;
+  color: $white;
+  background-color: $blue;
+  border: 0;
+  font-size: 1rem;
+  font-weight: $regular;
+
+  @media (min-width: $sm){
+    margin: 1.25em 0 8px;
+    padding: 6px 30px;
+    width: 100% !important;
+    display: block;
+  }
+
+  &:hover, &:focus, &:active{
+    background-color: $green;
+  }
+}
+
+.configure-clear{
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  color: $light-gray;
+  transition: color 0.2s;
+
+  @media (min-width: $sm){
+    display: block;
+  }
+
+  &:hover, &:active{
+    color: $gray;
+    transition: color 0.2s;
+  }
+}

@@ -1,0 +1,25 @@
+.list{
+
+  li{
+    list-style: none;
+    position: relative;
+
+    &::before{
+      content: "\2022";
+      position: absolute;
+      left: -20px;
+      font-size: 1.5em;
+      line-height: 1;
+    }
+  }
+}
+
+.list--blue-triangle{
+
+  li::before{
+    content: "\25b6";
+    color: $blue;
+    font-size: 0.75em;
+    line-height: 2.4;
+  }
+}

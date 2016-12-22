@@ -1,0 +1,53 @@
+.login-register{
+
+  .main-header{
+    margin-bottom: 60px;
+  }
+
+  .main-content{
+    padding-bottom: 60px;
+  }
+}
+
+
+.login-select, .account-login, .account-register{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.login-select{
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 45px;
+
+  a{
+    border: 1px solid $light-gray;
+    border-radius: 3px 3px 0 0;
+    display: inline-block;
+    margin-bottom: -1px;
+    padding: 8px 20px;
+    background-color: $light-gray;
+
+    &:hover, &:focus{
+      color: $white;
+      background-color: $blue;
+    }
+  }
+
+  .active{
+    border-bottom-color: $white;
+    background-color: $white;
+    font-weight: bold;
+  }
+}
+
+.account-login, .account-register{
+  display: none;
+
+  &.active{
+    display: block;
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+}

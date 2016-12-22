@@ -1,0 +1,168 @@
+.about{
+
+  .main-footer{
+    background-color: mix($darker-gray, $dark-gray, 60%);
+    color: $gray;
+
+    a:hover, a:focus{
+      color: $light-gray;
+    }
+  }
+}
+
+.about-intro-section{
+  text-align: center;
+  padding: 50px 0 0;
+  background-color: $blue;
+  color: $white;
+
+  @media (min-width: $sm){
+    padding: 90px 0 0;
+  }
+
+  p{
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1875rem;
+  }
+}
+
+.about-intro-title{
+  font-weight: $light;
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: $green;
+
+  @media (min-width: $sm){
+    font-size: 4rem;
+  }
+}
+
+.about-intro-tri{
+  width: 50%;
+  float: left;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: -1px;
+
+  @media (min-width: $sm){
+    height: 110px;
+  }
+
+  polygon{
+    fill: $white;
+  }
+}
+
+.about-section{
+  padding: 50px 0 0;
+  text-align: center;
+
+  @media (min-width: $sm){
+    padding: 70px 0 0;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    background: transparent right bottom no-repeat;
+    background-image: url("../img/ui/city-bg_top.png");
+    height: 150px;
+    background-size: 750px;
+  }
+
+  p{
+    max-width: 825px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a:hover, a:focus{
+    color: $green;
+    border-color: $green;
+  }
+}
+
+.about-title{
+  font-weight: $light;
+  font-size: 2rem;
+}
+
+.about-card-row{
+
+  @media (min-width: $sm){
+    display: flex;
+  }
+}
+
+.about-card{
+  background-color: $gray;
+  margin: 15px;
+  padding: 30px 15px 15px;
+  border-radius: 4px;
+  color: $white;
+
+  @media (min-width: $sm){
+    width: 50%;
+    float: left;
+  }
+}
+
+.about-card_logo{
+  border-bottom: 0;
+}
+
+.section-div{
+  margin: 60px 0;
+}
+
+.about-contact-section{
+  background-color: $darker-gray;
+  color: $white;
+  padding: 25px 0;
+
+  a:hover, a:focus{
+    color: $green;
+    border-color: $green;
+  }
+}
+
+.about-contact-title{
+  margin-bottom: -15px;
+
+  @media (min-width: $sm){
+    display: inline-block;
+    margin: 30px 0;
+  }
+}
+
+.list--contact{
+  padding: 0;
+
+  @media (min-width: $sm){
+    display: inline-block;
+    margin: 0 0 0 30px;
+    font-size: 1.25rem;
+  }
+
+  li{
+    list-style: none;
+
+    @media (min-width: $sm){
+      display: inline-block;
+
+      &::before{
+        content: "|";
+        display: inline-block;
+        color: $gray;
+        margin: 0 15px;
+      }
+
+      &:first-child::before{
+        display: none;
+      }
+    }
+  }
+}

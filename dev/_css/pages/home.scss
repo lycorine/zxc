@@ -1,0 +1,138 @@
+.home{
+  position: relative;
+}
+
+.intro-section{
+  background-color: $darker-gray;
+  color: $white;
+  text-align: center;
+  padding: 30px 0 20px;
+  position: relative;
+}
+
+.intro-title{
+  font-weight: $light;
+  font-size: 1.75rem;
+  letter-spacing: 0.06em;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $sm){
+    font-size: 2.375rem;
+  }
+}
+
+.intro-sub{
+  color: $blue;
+  font-weight: $bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 0.25em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $sm){
+    font-size: 1.75rem;
+  }
+
+  .underline{
+    border-bottom: 2px solid;
+  }
+}
+
+.intro-tri{
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+
+  @media (min-width: $sm){
+    height: 200px;
+  }
+
+  polygon{
+    fill: $darker-gray;
+  }
+}
+
+.home-bg{
+  z-index: -1;
+  background-color: $green;
+}
+
+.content-section{
+  text-align: center;
+
+  p{
+    max-width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+  }
+}
+
+.title-button{
+  border-color: $darker-gray;
+  margin-bottom: 15px;
+
+  h2{
+    font-size: 1.25rem;
+  }
+}
+
+.content-tri{
+  width: 50%;
+  float: left;
+  height: 135px;
+  margin-top: 50px;
+  margin-bottom: -1px;
+
+  polygon{
+    fill: $lighter-gray;
+  }
+}
+
+.action-section{
+  background-color: $lighter-gray;
+
+  @media (min-width: $sm){
+    padding: 20px 0 40px;
+  }
+
+  &::before, &::after{
+    content: "";
+    display: block;
+    background: transparent center center no-repeat;
+  }
+
+  &::before{
+    background-image: url("../img/ui/city-bg_top.png");
+    height: 128px;
+  }
+
+  &::after{
+    background-image: url("../img/ui/city-bg_bottom.png");
+    height: 110px;
+  }
+}
+
+.action-section__buttons{
+  background-color: $blue;
+  padding: 15px 0;
+  text-align: center;
+
+  .button{
+    width: 100%;
+    max-width: 400px;
+    color: $white;
+    font-size: 1.25rem;
+    border-color: $white;
+
+    &:hover, &:focus{
+      border-color: $green;
+      background-color: $green;
+    }
+  }
+}

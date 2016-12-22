@@ -1,0 +1,37 @@
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+hr{
+  border: 0;
+  border-top: 1px solid $light-gray;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video{
+  vertical-align: middle;
+}
+
+a{
+  color: inherit;
+  border-bottom: 2px solid $green;
+  text-decoration: none;
+  transition: colors 0.2s, border-color 0.2s;
+
+  &:hover, &:focus{
+    color: $blue;
+    border-bottom-color: $blue;
+    text-decoration: none;
+    transition: colors 0.2s, border-color 0.2s;
+  }
+}
+

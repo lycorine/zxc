@@ -1,0 +1,115 @@
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  background-color: rgba($darker-gray, 0.8);
+
+  &.active{
+    display: block;
+  }
+}
+
+.modal_window{
+  @include center-align;
+  background-color: $white;
+  padding: 20px 30px 30px;
+  border-radius: 4px;
+  max-width: 94%;
+}
+
+.modal_window_header{
+  @extend %clearfix;
+  border-bottom: 1px solid $light-gray;
+  padding: 0 25px 5px 0;
+  margin: 0 0 15px;
+  position: relative;
+}
+
+.modal-window-close{
+  border-bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &::before{
+    content: "\00d7";
+    color: $gray;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &:hover::before{
+    color: $darker-gray;
+  }
+}
+
+/* ==========================================================================
+   Login Modal
+========================================================================== */
+
+#login-modal{
+
+  .modal_window{
+    width: 400px;
+  }
+}
+
+.login-form-select{
+
+  ul{
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  li{
+    display: inline-block;
+
+    &::after{
+      content: "/";
+      margin: 0 5px 0 10px;
+      color: $gray;
+    }
+
+    &:last-child::after{
+      display: none;
+    }
+  }
+
+  a{
+    border-bottom: 0;
+
+    &:hover, &:focus{
+      color: $green;
+    }
+  }
+
+  .active{
+    font-weight: $bold;
+  }
+}
+
+.login-form{
+  display: none;
+
+  &.active{
+    display: block;
+  }
+
+  h2{
+    font-size: 1.25rem;
+  }
+
+  input[type=submit]{
+    font-size: 0.875rem;
+  }
+}
+
+/* ==========================================================================
+   Terms Modal
+========================================================================== */

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Clear
+========================================================================== */
+
+.clear{
+  @extend %clearfix;
+}
+
+/* ==========================================================================
+   Alignment
+========================================================================== */
+
+.center-block, .align-right, .align-left{
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: $sm){
+
+  .align-right{
+    float: right !important;
+  }
+
+  .align-left{
+    float: left !important;
+  }
+}

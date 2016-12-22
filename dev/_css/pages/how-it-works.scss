@@ -1,0 +1,164 @@
+.about-tri{
+  width: 100%;
+  height: 45px;
+  margin-top: -1px;
+  margin-bottom: 30px;
+
+  @media (min-width: $sm){
+    height: 75px;
+    margin-bottom: 60px;
+  }
+
+  polygon{
+    fill: $darker-gray;
+  }
+}
+
+.about-how-section{
+  padding: 40px 0 0;
+
+  &::after{
+    content: "";
+    display: block;
+    background: transparent right bottom no-repeat;
+    background-image: url("../img/ui/city-bg_top.png");
+    height: 150px;
+    background-size: 750px;
+  }
+}
+
+.about-how-title{
+  font-weight: $light;
+  font-size: 2rem;
+}
+
+.how-steps{
+
+  @media (min-width: $sm){
+    margin-bottom: 60px;
+  }
+}
+
+.how-step{
+  max-width: 400px;
+
+  @media (max-width: $sm){
+    margin: 30px auto;
+  }
+}
+
+.step_banner{
+  background-color: $blue;
+  color: $white;
+  padding: 15px;
+  position: relative;
+
+  @media (min-width: $sm){
+    height: 116px;
+    padding: 15px 10px;
+  }
+
+  @media (min-width: $md){
+    padding: 15px 20px;
+  }
+
+  @media (min-width: $lg){
+    padding: 15px 30px;
+  }
+
+  .how-step--2 &, .how-step--3 &{
+
+    @media (min-width: $sm){
+      padding-left: 70px;
+    }
+
+    @media (min-width: $md){
+      padding-left: 80px;
+    }
+  }
+
+  .how-step--3 &{
+
+    @media (min-width: $md){
+      padding-right: 40px;
+    }
+
+    @media (min-width: $lg){
+      padding-right: 80px;
+    }
+  }
+}
+
+.step_banner_begin-tri{
+  @include vertical-align;
+  left: 0;
+  width: 58px;
+  z-index: 2;
+  display: none;
+
+  @media (min-width: $sm){
+    display: block;
+  }
+
+  polygon{
+    fill: $white;
+  }
+}
+
+.step_banner_end-tri{
+  @include vertical-align;
+  right: -76px;
+  width: 76px;
+  z-index: 3;
+  display: none;
+
+  @media (min-width: $sm){
+    display: block;
+  }
+
+  polygon{
+    fill: $blue;
+  }
+}
+
+.step-title{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.step-instruction{
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.2;
+
+  @media (min-width: $sm){
+    font-size: 1rem;
+  }
+
+  @media (min-width: $md){
+    font-size: 1.25rem;
+  }
+
+  .how-step--1 &, .how-step--2 &{
+    @media (min-width: $sm) and (max-width: $md){
+      width: 210px;
+    }
+  }
+}
+
+.how-callout-wrap{
+  text-align: center;
+}
+
+.how-callout{
+  text-align: left;
+  display: inline-block;
+
+  h3{
+    margin: 1.25em 0 -10px;
+
+    @media (max-width: $sm){
+      font-size: 1.125rem;
+    }
+  }
+}

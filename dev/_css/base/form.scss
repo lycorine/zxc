@@ -1,0 +1,96 @@
+fieldset{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend{
+  display: block;
+  width: 100%;
+  padding: 0;
+  line-height: inherit;
+  font-weight: bold;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-size: 1.125rem;
+  color: $blue;
+}
+
+label{
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1em;
+  font-weight: bold;
+
+  fieldset &{
+    font-weight: normal;
+    display: block;
+  }
+}
+
+input, select, textarea{
+  background-color: transparent;
+  border: 2px solid $light-gray;
+  font-weight: normal;
+  padding: 0 5px;
+  border-radius: 0;
+  color: $gray;
+
+  &:disabled{
+    background-color: mix($light-gray, $lighter-gray, 25%);
+  }
+}
+
+input{
+  width: 100%;
+
+  &[type="search"]{
+    display: block;
+    -webkit-appearance: none;
+  }
+
+  &[type="radio"],
+  &[type="checkbox"]{
+    margin: 0.25em 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+    display: inline-block;
+    width: auto;
+  }
+
+  &[type="file"]{
+    display: block;
+  }
+
+  &[type="range"]{
+    display: block;
+  }
+
+  &[type="button"],
+  &[type="submit"],
+  &[type="reset"]{
+    width: auto;
+  }
+}
+
+select{
+  display: block;
+  width: 100%;
+}
+
+textarea{
+  display: block;
+  width: 100%;
+  resize: vertical;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0){
+
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"]{
+    line-height: 2.125;
+  }
+}

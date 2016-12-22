@@ -1,0 +1,220 @@
+.order-summary{
+
+  .main-header{
+    margin-bottom: 40px;
+  }
+
+  .main-content{
+    padding-bottom: 40px;
+  }
+}
+
+/* ==========================================================================
+   Order Table
+========================================================================== */
+
+.order-sum{
+  font-size: 0.8125rem;
+
+  th, td{
+    border: 0;
+
+    @media (min-width: $sm){
+      white-space: nowrap;
+    }
+
+    @media (max-width: $sm){
+      display: block;
+      width: 100%;
+
+      &[data-label]::before{
+        content: attr(data-label) ": ";
+        font-weight: $bold;
+      }
+    }
+  }
+
+  th:empty, td:empty{
+    @media (max-width: $sm){
+      display: none;
+    }
+  }
+}
+
+/* Header */
+.order-sum_head{
+  background-color: $light-gray;
+
+  @media (max-width: $sm){
+    display: none;
+  }
+
+  th{
+    padding: 8px 15px;
+    line-height: 1.2;
+  }
+}
+
+/* Sub Order */
+.sub-order{
+  border-bottom: 30px solid $white;
+
+  tr{
+    @media (max-width: $sm){
+      border-top: 1px solid $light-gray;
+    }
+  }
+
+  tr:nth-child(even){
+    background-color: transparent;
+  }
+
+  th{
+    padding: 8px 15px;
+
+    @media (min-width: $sm){
+      border-top: 1px solid $light-gray;
+    }
+  }
+
+  td{
+    padding: 8px 15px;
+
+    @media (min-width: $sm){
+      border-top: 1px solid $light-gray;
+    }
+  }
+}
+
+.sub-order__map{
+  padding: 0 !important;
+  min-width: 150px;
+
+  .map{
+    width: 100%;
+    height: 207px;
+    border: 2px solid $gray;
+
+    @media (min-width: $sm){
+      border-bottom: 0;
+    }
+  }
+}
+
+.sub-order_header{
+  font-size: 1rem;
+  color: $blue;
+
+  @media (min-width: $sm){
+    font-size: 1.125rem;
+  }
+}
+
+.sub-order_subtotal{
+  font-size: 0.875rem;
+
+  td{
+    background-color: $gray;
+    color: $white;
+    font-weight: $bold;
+  }
+}
+
+.sub-order_remove{
+  border-bottom: 0;
+  font-weight: normal;
+
+  &:hover, &:focus{
+    color: $green;
+  }
+
+  &::before{
+    content: "\00d7";
+    margin-right: 5px;
+  }
+}
+
+/* Footer */
+.order-sum_contract{
+  background-color: $light-gray;
+
+  legend{
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+
+    @media (min-width: $md){
+      display: inline-block;
+    }
+  }
+
+  label{
+    display: block;
+    margin: 0 0 0 20px;
+    font-weight: $bold;
+    @media (min-width: $md){
+      display: inline-block;
+    }
+
+    span{
+      font-weight: $regular;
+    }
+  }
+
+  input[type="radio"]{
+    margin: 0 3px 0 0;
+  }
+}
+
+.order-sum_total{
+  background-color: $dark-gray;
+  color: $green;
+  font-weight: $bold;
+  font-size: 1.125rem;
+
+  td{
+
+    @media (max-width: $sm){
+      border: 0;
+      padding: 8px 15px;
+    }
+  }
+}
+
+/* ==========================================================================
+   Buttons
+========================================================================== */
+
+.order-buttons{
+  text-align: right;
+}
+
+.order-button{
+  @extend .button;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 1rem;
+  font-weight: $regular;
+}
+
+.order-button--login{
+  line-height: 1.2;
+
+  span{
+    font-size: 0.75rem;
+    letter-spacing: 0.0625em;
+  }
+}
+
+.order-button--continue{
+  border-bottom: 0;
+  font-size: 0.875rem;
+
+  &::after{
+    content: "\00bb";
+    margin-left: 5px;
+  }
+}

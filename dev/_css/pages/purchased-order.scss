@@ -1,0 +1,42 @@
+.purchased-order{
+
+  .main-header{
+    margin-bottom: 40px;
+  }
+
+  .main-content{
+    padding-bottom: 40px;
+  }
+
+  .col-form{
+
+    @media (min-width: $sm){
+      width: calc(100% - 275px);
+      margin-bottom: 0;
+      float: right;
+    }
+
+    @media (min-width: $md){
+      width: calc(100% - 350px);
+    }
+  }
+
+  .col-sum{
+
+    @media (min-width: $sm){
+      width: 275px;
+      float: left;
+    }
+
+    @media (min-width: $md){
+      width: 350px;
+    }
+  }
+}
+
+.purchased-order-contact{
+
+  @media (min-width: $md){
+    padding-left: 60px;
+  }
+}
