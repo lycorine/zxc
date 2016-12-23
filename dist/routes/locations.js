@@ -147,7 +147,7 @@ var locationsJSON = [{
         "name": "7 Teleport Drive",
         "datacenter": "Telehouse",
         "zone": "1",
-        "message": "Lit services only"
+        "message": "Lit only"
       }
     },
     {
