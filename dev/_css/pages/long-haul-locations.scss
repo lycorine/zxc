@@ -1,0 +1,19 @@
+.long-haul-locations{
+  text-align: center;
+}
+
+.lh-datacenter-table{
+  border: 1px solid $light-gray;
+  max-width: 700px;
+  margin: 0 auto 80px;
+  font-size: 0.875rem;
+
+  th, td{
+    padding: 10px 20px;
+  }
+
+  th[colspan="2"]{
+    text-transform: uppercase;
+    background-color: $light-gray;
+  }
+}
