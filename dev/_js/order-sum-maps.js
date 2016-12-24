@@ -155,7 +155,7 @@ var mapMarker = L.Icon.extend({
   }
 });
 // create individual marker styles
-var selectedMarker = new mapMarker({iconUrl: "content/img/ui/marker-zone-a-2x.png"});
+var selectedMarker = new mapMarker({iconUrl: "/content/img/ui/marker-zone-a-2x.png"});
 
 //add json data for locations
 var locationsLayer = L.geoJson(locations1JSON, {
@@ -212,7 +212,7 @@ var mapMarker = L.Icon.extend({
   }
 });
 // create individual marker styles
-var selectedMarker = new mapMarker({iconUrl: "content/img/ui/marker-zone-a-2x.png"});
+var selectedMarker = new mapMarker({iconUrl: "/content/img/ui/marker-zone-a-2x.png"});
 
 //add json data for locations
 var locationsLayer = L.geoJson(locations2JSON, {
