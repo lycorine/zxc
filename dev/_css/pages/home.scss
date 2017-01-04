@@ -108,12 +108,12 @@
   }
 
   &::before{
-    background-image: url("../img/ui/city-bg_top.png");
+    background-image: url("/content/img/ui/city-bg_top.png");
     height: 128px;
   }
 
   &::after{
-    background-image: url("../img/ui/city-bg_bottom.png");
+    background-image: url("/content/img/ui/city-bg_bottom.png");
     height: 110px;
   }
 }
