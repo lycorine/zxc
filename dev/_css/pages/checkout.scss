@@ -163,6 +163,18 @@
   }
 }
 
+.link--print{
+  float: left;
+  display: block;
+  margin: 8px 0;
+  color: $gray;
+  border: 0;
+
+  &:hover{
+    color: $blue;
+  }
+}
+
 .button--terms{
   float: right;
   font-size: 1rem;
