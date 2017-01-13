@@ -114,10 +114,7 @@
   padding: 10px 15px;
   background-color: mix($darker-gray, $dark-gray, 60%);
   color: $white;
-
-  @media (min-width: $sm) and (max-height: 625px){
-    overflow-y: scroll;
-  }
+  z-index: 20000;
 
   @media (min-width: $sm){
     top: 89px; /* height of header */
