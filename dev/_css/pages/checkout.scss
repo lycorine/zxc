@@ -58,6 +58,25 @@
 .checkout-sum__total{
   font-size: 1.25rem;
   text-transform: uppercase;
+  background-color: $light-gray;
+  padding: 10px 20px;
+  margin: 25px -20px -15px;
+}
+
+.checkout-sum__total__title{
+  font-weight: $bold;
+  display: block;
+}
+
+.checkout-sum__total__note{
+  font-size: 0.875rem;
+  text-transform: none;
+  display: block;
+  margin-top: -8px;
+}
+
+.checkout-sum__total__amount{
+  display: block;
 }
 
 .checkout-sum__route{
